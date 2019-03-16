@@ -1,0 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: tkelsie <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/03/13 12:54:59 by tkelsie           #+#    #+#             */
+/*   Updated: 2019/03/13 12:58:29 by tkelsie          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "lib.h"
+#include <stdio.h>
+t_list  *ft_list_at(t_list *begin_list, unsigned int nbr);
+int		main(void)
+{
+	t_list *list;
+
+	list = 0;
+	list = ft_create_elem("asdf\n");
+	ft_list_push_phront(&list, "test\n");
+	ft_list_push_phront(&list, "lambda\n");
+	ft_list_push_back(&list, "mama\n");
+	print_list(list);
+	printf("%d\n\n", ft_list_size(list));
+	//print_list(ft_list_last(list));
+//	ft_list_clear(list);
+	//print_list(list);
+	ft_list_at(list, 3);
+
+	return (0);
+}
